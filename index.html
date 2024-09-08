@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Karly</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h2>Calculadora Pa las Bandidas</h2>
+        
+        <!-- Primera Parte: Cálculo de USDT -->
+        <form id="priceCalculator">
+            <label for="euros">Cantidad de Euros (€):</label>
+            <input type="number" id="euros" name="euros" step="0.01" min="0" required>
+
+            <label for="usdtPrice">Precio de compra del USDT (€):</label>
+            <input type="number" id="usdtPrice" name="usdtPrice" step="0.0001" min="0" required>
+
+            <button type="submit">Calcular</button>
+        </form>
+
+        <div class="result">
+            <h3>Resultado:</h3>
+            <p id="resultText">Introduce los datos para calcular.</p>
+        </div>
+
+        <!-- Segunda Parte: Resta de 1.3 USDT -->
+        <div class="additional-calculation">
+            <h3>Envío a otra billetera</h3>
+            <button id="calculateFee">Restar 1.3 USDT por envío</button>
+            <p id="feeResultText">El resultado aparecerá aquí después de restar la comisión.</p>
+        </div>
+
+        <!-- Tercera Parte: Cálculo del cambio de USDT -->
+        <div class="final-calculation">
+            <h3>Cálculo del cambio de USDT</h3>
+            <button id="calculateChange">Aplicar 1% de anuncio y calcular venta</button>
+
+            <label for="sellPrice">Precio de venta del USDT (A Bolos):</label>
+            <input type="number" id="sellPrice" name="sellPrice" step="0.0001" min="0" required>
+
+            <p id="changeResultText">El resultado aparecerá aquí después de calcular el cambio.</p>
+        </div>
+
+        <!-- Nueva parte: División del resultado de la venta -->
+        <div class="division-calculation">
+            <h3>Dividir el resultado de la venta</h3>
+            <label for="divideBy">Dividir entre:</label>
+            <input type="number" id="divideBy" name="divideBy" step="0.01" min="0" required>
+            <button id="divideResult">Dividir resultado</button>
+            <p id="divisionResultText">El resultado aparecerá aquí después de dividir.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
